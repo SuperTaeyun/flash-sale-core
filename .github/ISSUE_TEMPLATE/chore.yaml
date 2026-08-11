@@ -1,0 +1,58 @@
+name: Chore
+description: 개발 환경, 설정, 빌드, CI/CD 등의 작업을 수행.
+title: "[CHORE]: "
+labels:
+  - chore
+projects: [ "SuperTaeyun/2" ]
+body:
+  - type: textarea
+    id: purpose
+    attributes:
+      label: 목적
+      description: 작업을 수행하는 이유.
+      placeholder: |
+        예: GitHub Issue 작성 형식을 통일하기 위해 Issue Template을 추가한다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: tasks
+    attributes:
+      label: 작업 내용
+      description: 수행해야 할 작업.
+      placeholder: |
+        - [ ] Feature Template 추가
+        - [ ] Bug Template 추가
+        - [ ] Chore Template 추가
+        - [ ] Docs Template 추가
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 완료 조건
+      description: 작업이 완료되었다고 판단할 기준.
+      placeholder: |
+        - [ ] 설정이 정상적으로 적용된다.
+        - [ ] 관련 기능이 정상적으로 동작한다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: 참고 사항
+      description: 관련 문서나 Issue가 있다면 작성해주세요.
+      placeholder: |
+        관련 내용을 작성해주세요.
+
+  - type: textarea
+    id: references
+    attributes:
+      label: 참고 사항
+      description: (Optional) 관련 문서, 이슈 등을 추가한다.
+      placeholder: |
+        관련 문서나 Issue.
+    validations:
+      required: false

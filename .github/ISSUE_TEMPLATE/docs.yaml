@@ -1,0 +1,50 @@
+name: Documentation
+description: 문서를 작성/수정한다.
+title: "[DOCS]: "
+labels:
+  - docs
+projects: [ "SuperTaeyun/2" ]
+body:
+  - type: textarea
+    id: purpose
+    attributes:
+      label: 목적
+      description: 어떤 문서를 왜 작성/수정하는가.
+      placeholder: |
+        예: 프로젝트의 로컬 개발 환경 설정 방법을 문서화.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: 문서 내용
+      description: 작성/수정할 내용을 작성.
+      placeholder: |
+        - [ ] 개발 환경
+        - [ ] 실행 방법
+        - [ ] 테스트 방법
+        - [ ] 주요 설정
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 완료 조건
+      description: 문서 작업이 완료되었다고 판단할 기준.
+      placeholder: |
+        - [ ] 필요한 내용이 모두 작성되었다.
+        - [ ] 실제 프로젝트 설정과 문서 내용이 일치한다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: 참고 사항
+      description: (Optional) 관련 문서, 이슈 등을 추가한다.
+      placeholder: |
+        관련 문서나 Issue.
+    validations:
+      required: false
