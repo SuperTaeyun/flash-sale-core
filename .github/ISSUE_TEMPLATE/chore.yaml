@@ -46,13 +46,3 @@ body:
       description: 관련 문서나 Issue가 있다면 작성해주세요.
       placeholder: |
         관련 내용을 작성해주세요.
-
-  - type: textarea
-    id: references
-    attributes:
-      label: 참고 사항
-      description: (Optional) 관련 문서, 이슈 등을 추가한다.
-      placeholder: |
-        관련 문서나 Issue.
-    validations:
-      required: false
