@@ -3,6 +3,7 @@ description: 기존 기능의 오류를 수정.
 title: "[BUG]: "
 labels:
   - bug
+projects: [ "flash-sale" ]
 body:
   - type: textarea
     id: problem
@@ -47,3 +48,13 @@ body:
         - [ ] 전체 테스트가 통과한다.
     validations:
       required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: 참고 사항
+      description: (Optional) 관련 문서, 이슈 등을 추가한다.
+      placeholder: |
+        관련 문서나 Issue.
+    validations:
+      required: false

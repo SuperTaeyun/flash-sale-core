@@ -3,6 +3,7 @@ description: 새로운 기능을 구현합니다.
 title: "[FEATURE]: "
 labels:
   - feature
+projects: [ "flash-sale" ]
 body:
   - type: textarea
     id: purpose
@@ -44,8 +45,8 @@ body:
     id: references
     attributes:
       label: 참고 사항
-      description: 관련 문서, 이슈 등을 추가한다.
+      description: (Optional) 관련 문서, 이슈 등을 추가한다.
       placeholder: |
-        (Optional) 관련 문서나 Issue.
-    validation:
+        관련 문서나 Issue.
+    validations:
       required: false
