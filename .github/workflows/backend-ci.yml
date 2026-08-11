@@ -1,0 +1,30 @@
+name: backend-ci.yml
+on:
+  push: # 원활한 테스트를 위해 잠시 추가한다. 테스트가 종료되면 즉시 삭제될 것임.
+    branches:
+      - chore/github-actions-ci
+  pull_request:
+    branches:
+      - main
+      - dev
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: ./backend
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Test
+        run: ./gradlew test
