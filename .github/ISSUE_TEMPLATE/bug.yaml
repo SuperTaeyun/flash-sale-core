@@ -3,7 +3,7 @@ description: 기존 기능의 오류를 수정.
 title: "[BUG]: "
 labels:
   - bug
-projects: [ "flash-sale" ]
+projects: [ "SuperTaeyun/2" ]
 body:
   - type: textarea
     id: problem
