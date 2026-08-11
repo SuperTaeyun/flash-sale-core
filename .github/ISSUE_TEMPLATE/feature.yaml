@@ -1,0 +1,51 @@
+name: Feature
+description: 새로운 기능을 구현합니다.
+title: "[FEATURE]: "
+labels:
+  - feature
+body:
+  - type: textarea
+    id: purpose
+    attributes:
+      label: 목적
+      description: 추가할 기능의 설명과 구현하는 이유를 작성한다.
+      placeholder: |
+        예: 상품의 재고를 조회할 수 있도록 한다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: 작업 내용
+      description: 구현해야 할 작업을 작성한다.
+      placeholder: |
+        - [ ] Entity 구현
+        - [ ] Repository 구현
+        - [ ] Service 구현
+        - [ ] Controller 구현
+        - [ ] 테스트 작성
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 완료 조건
+      description: Issue가 완료되었다고 판단할 기준을 작성한다.
+      placeholder: |
+        - [ ] 정상적인 요청이 처리된다.
+        - [ ] 예외 상황이 처리된다.
+        - [ ] 테스트가 통과한다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: 참고 사항
+      description: 관련 문서, 이슈 등을 추가한다.
+      placeholder: |
+        (Optional) 관련 문서나 Issue.
+    validation:
+      required: false
