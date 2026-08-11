@@ -25,6 +25,10 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '21'
+          cache: 'gradle' # 추후 setup-gradle로 변경할 것.
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
 
       - name: Test
         run: ./gradlew test
