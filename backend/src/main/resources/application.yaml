@@ -1,3 +1,13 @@
 spring:
   application:
     name: backend
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/database?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Seoul
+    username: root
+    password: root_password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+server:
+  # 윈도우가 7983 ~ 8032 범위의 포트를 예약해두고 있는 상태라 다음의 포트를 사용한다.
+  port: 8826
