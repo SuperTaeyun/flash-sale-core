@@ -2,7 +2,7 @@ name: backend-ci.yml
 on:
   push:
     branches:
-      - chore/13-ci-cd
+      - chore/13-ci-cd-test
   pull_request:
     branches:
       - main
