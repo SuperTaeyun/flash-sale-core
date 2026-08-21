@@ -56,4 +56,15 @@ public class OrderItem {
     @Check(constraints = "quantity > 0")
     @Column(name = "quantity", nullable = false)
     private Integer quantity;
+
+    public OrderItem(Order order, Product product, String productNameSnapshot, BigDecimal productBasePriceSnapshot, ProductSKU productSKU, String skuNameSnapshot, BigDecimal skuAdditionalPriceSnapshot, Integer quantity) {
+        this.order = order;
+        this.product = product;
+        this.productNameSnapshot = productNameSnapshot;
+        this.productBasePriceSnapshot = productBasePriceSnapshot;
+        this.productSKU = productSKU;
+        this.skuNameSnapshot = skuNameSnapshot;
+        this.skuAdditionalPriceSnapshot = skuAdditionalPriceSnapshot;
+        this.quantity = quantity;
+    }
 }

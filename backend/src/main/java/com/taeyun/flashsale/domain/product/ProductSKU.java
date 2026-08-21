@@ -35,4 +35,10 @@ public class ProductSKU extends BaseEntity {
     @Check(constraints = "stock_quantity >= 0")
     @Column(name = "stock_quantity", nullable = false)
     private Integer stockQuantity;
+
+    public ProductSKU(Product product, BigDecimal additionalPrice, Integer stockQuantity) {
+        this.product = product;
+        this.additionalPrice = additionalPrice;
+        this.stockQuantity = stockQuantity;
+    }
 }

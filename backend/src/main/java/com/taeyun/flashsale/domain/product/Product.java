@@ -30,4 +30,9 @@ public class Product extends BaseEntity {
     @Check(constraints = "base_price > 0")
     @Column(name = "base_price", nullable = false, precision = 15, scale = 2)
     private BigDecimal basePrice;
+
+    public Product(String name, BigDecimal basePrice) {
+        this.name = name;
+        this.basePrice = basePrice;
+    }
 }

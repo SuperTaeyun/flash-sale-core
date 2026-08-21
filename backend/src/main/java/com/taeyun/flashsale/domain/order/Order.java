@@ -69,4 +69,12 @@ public class Order extends BaseEntity {
             cascade = CascadeType.ALL, orphanRemoval = true
     )
     private List<OrderItem> orderItems;
+
+    public Order(IssuedCoupon issuedCoupon, BigDecimal subtotalAmount, BigDecimal discountAmount, BigDecimal totalAmount, OrderStatus status) {
+        this.issuedCoupon = issuedCoupon;
+        this.subtotalAmount = subtotalAmount;
+        this.discountAmount = discountAmount;
+        this.totalAmount = totalAmount;
+        this.status = status;
+    }
 }
