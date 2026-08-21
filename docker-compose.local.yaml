@@ -9,7 +9,7 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql
 
-  database-test:
+  database_test:
     image: mysql:8.4.11
     environment:
       MYSQL_DATABASE: database_test
