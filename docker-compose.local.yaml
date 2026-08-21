@@ -9,5 +9,13 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql
 
+  database-test:
+    image: mysql:8.4.11
+    environment:
+      MYSQL_DATABASE: database_test
+      MYSQL_ROOT_PASSWORD: root_password
+    ports:
+      - "3307:3306"
+
 volumes:
   mysql_data:
