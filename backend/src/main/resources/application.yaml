@@ -8,6 +8,19 @@ spring:
     password: root_password
     driver-class-name: com.mysql.cj.jdbc.Driver
 
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+
 server:
   # 윈도우가 7983 ~ 8032 범위의 포트를 예약해두고 있는 상태라 다음의 포트를 사용한다.
   port: 8826
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.orm.jdbc.bind: TRACE
