@@ -1,5 +1,8 @@
 name: backend-ci.yml
 on:
+  push:
+    branches:
+      - chore/13-ci-cd
   pull_request:
     branches:
       - main
@@ -12,6 +15,20 @@ jobs:
     defaults:
       run:
         working-directory: ./backend
+
+    services:
+      mysql:
+        image: mysql.8.4.11
+        env:
+          MYSQL_DATABASE: database_test
+          MYSQL_ROOT_PASSWORD: root_password
+        ports:
+          - 3307:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h 127.0.0.1 -u root -p root_password" 
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=10
 
     steps:
       - name: Checkout
